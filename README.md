@@ -107,9 +107,3 @@ There you have
   - `via` – supports [VIA Configurator](https://www.caniusevia.com/) for UI-based config
   - `default` – doesn't support VIA – as of 2024-01-07 the only other difference is that it supports showing battery level using `Fn + B`
 - Keyboard's low-level code – likely you don't want to change it
-
-## QMK: Workflow
-
-- Make a code change
-- Compile: outputs a `.bin` file
-- Flash
