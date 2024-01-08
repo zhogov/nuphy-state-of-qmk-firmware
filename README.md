@@ -44,7 +44,7 @@ Supported keyboards:
 - Air75 v2
 
 What's inside:
-- Fixes
+- Fixes – some were used by Nuphy
 - Mods (some are opinionated)
 - Latest QMK
 - Latest Nuphy
@@ -53,9 +53,22 @@ Changes
 - Various Nuphy source bug fixes (e.g., **F key modifiers not working in wireless**).
 - Fix misplaced LED matrix configurations
 - Refactor RF logic to use a RF driver instead of managing through housekeeping
-- _Attempted_ fixes for stuck keys in wireless mode.
+- Fix for stuck keys in wireless mode
 - Make RF connect only for 5 seconds before sleeping again. Don't want the LED blinking for 2 minutes if keys are accidentally pressed on wireless mode without a connection.
 
+### [DP19/qmk_firmware](https://github.com/DP19/qmk_firmware/commits/nuphy-air75-mod)
+
+Supported keyboards:
+- Air75 v2
+
+What's inside:
+- Fixes
+- Opinionated mods
+- Latest QMK
+- Latest Nuphy
+
+Fixes
+-  Send reports twice to try and prevent stuck keys / missed keys 
 
 ### [edykim/qmk_firmware](https://github.com/edykim/qmk_firmware)
 
