@@ -33,10 +33,10 @@ Supported keyboards:
 
 Inside: Nuphy’s official repo for all keyboard
 
-Fork of [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) – but as for 2024-01-07 the work of merging the Nuphy's changes back into QMK was quite slow: qmk/qmk_firmware#22751.
+Fork of [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) – but as for 2024-02-28 the work of merging the Nuphy's changes back into QMK was quite slow: qmk/qmk_firmware#22751.
 Hoping one day they will get it merged.
 
-Differences from official Nuphy firmware **binaries**: unknown
+Differences from official Nuphy firmware **binaries**: fully unknown but smme to be substantional, e.g. "improve bluetooth connection stability" haven't made it to official open source version yet.
 
 ### [jincao1/qmk_firmware](https://github.com/jincao1/qmk_firmware)
 
@@ -80,6 +80,20 @@ Initial attempt to pull latest QMK into latest Nuphy code. As of 2024-01-07 – 
 Note:
 - Branch qmk/nuphy-keyboards : clean state
 - Branch edykim/nuphy-keyboards-mod : modded by edykim
+
+
+### [adi4086/qmk_firmware](https://github.com/adi4086/qmk_firmware)
+
+Supported keyboards:
+- Air75 v2
+- Air96 v2
+
+First custom firmware for Air96 v2
+
+Fixes
+- New algorithm to prevent unnecessary EEPROM writes when you change light settings
+- Pulled fixes from jincao1
+- Opinionated mods
 
 ## QMK: Tooling
 
