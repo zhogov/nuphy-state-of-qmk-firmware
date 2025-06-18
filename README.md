@@ -1,28 +1,28 @@
-# State of custom QMK firmware for Nuphy keyboards
+# State of custom QMK firmware for NuPhy keyboards
 
-Nuphy V2 keyboards are running a version of [QMK firmware](https://qmk.fm/).
-QMK is an open-source project and thankfully Nuphy has published changes they made to QMK.
+NuPhy V2 keyboards are running a version of [QMK firmware](https://qmk.fm/).
+QMK is an open-source project and thankfully NuPhy has published changes they made to QMK.
 
-**Goal of this doc:** provide in-depth explanation of existing QMK repos for Nuphy keyboards and only some high-level QMK info.
+**Goal of this document:** provide in-depth explanation of existing QMK repos for NuPhy keyboards and only some high-level QMK information.
 
 Why you might want to use custom firmware:
 - Fixes – which haven't made to official firmware just yet
-- Very custom mappings (e.g. switch between Win and Mac automatically – based on NumLock state)
+- Very custom mappings (e.g. switch between Windows and Mac automatically – based on the Num Lock state)
 
-Potential downsides: we are not sure if Nuphy published all of their code, so
+Potential downsides: we are not sure if NuPhy published all of their code, so
 - Some fixes from official firmware might be missing
 - Battery life might be worse
 
 If you're willing to continue, here's the order of actions:
 1. Get the code from one of the repositories
-2. (Optional) Change the code 
+2. (Optional) Change the code
 3. Compile and flash
 
 ## List of repositories
 
 ### [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware)
 
-Supported Nuphy's keyboards: **none**
+Supported NuPhy's keyboards: **none**
 
 ### [nuphy-src/qmk_firmware](https://github.com/nuphy-src/qmk_firmware)
 
@@ -31,12 +31,12 @@ Supported keyboards:
 - Air75 v2
 - Air96 v2
 
-Inside: Nuphy’s official repo for all keyboard
+Inside: NuPhy’s official repo for all keyboard
 
-Fork of [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) – but as for 2024-02-28 the work of merging the Nuphy's changes back into QMK was quite slow: qmk/qmk_firmware#22751.
+Fork of [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) – but as for 2024-02-28 the work of merging the NuPhy's changes back into QMK was quite slow: qmk/qmk_firmware#22751.
 Hoping one day they will get it merged.
 
-Differences from official Nuphy firmware **binaries**: fully unknown but smme to be substantional, e.g. "improve bluetooth connection stability" haven't made it to official open source version yet.
+Differences from official NuPhy firmware **binaries**: fully unknown, but it seems to be substantial, e.g., "improve Bluetooth connection stability" haven't made it to the official open source version yet.
 
 ### [jincao1/qmk_firmware](https://github.com/jincao1/qmk_firmware)
 
@@ -44,17 +44,17 @@ Supported keyboards:
 - Air75 v2
 
 What's inside:
-- Fixes – some were used by Nuphy
+- Fixes – some were used by NuPhy
 - Mods (some are opinionated)
 - Latest QMK
-- Latest Nuphy
+- Latest NuPhy
 
 Changes
-- Various Nuphy source bug fixes (e.g., **F key modifiers not working in wireless**).
+- Various NuPhy source bug fixes (e.g., **F key modifiers not working in wireless**).
 - Fix misplaced LED matrix configurations
 - Refactor RF logic to use a RF driver instead of managing through housekeeping
 - Fix for stuck keys in wireless mode
-- Make RF connect only for 5 seconds before sleeping again. Don't want the LED blinking for 2 minutes if keys are accidentally pressed on wireless mode without a connection.
+- Make RF connect only for 5 seconds before sleeping again. We don't want the LED blinking for 2 minutes if keys are accidentally pressed on wireless mode without a connection.
 
 ### [DP19/qmk_firmware](https://github.com/DP19/qmk_firmware/commits/nuphy-air75-mod)
 
@@ -65,21 +65,21 @@ What's inside:
 - Fixes
 - Opinionated mods
 - Latest QMK
-- Latest Nuphy
+- Latest NuPhy
 
 Fixes
--  Send reports twice to try and prevent stuck keys / missed keys 
+-  Send reports twice to try and prevent stuck keys / missed keys
 
 ### [edykim/qmk_firmware](https://github.com/edykim/qmk_firmware)
 
 Supported keyboards:
 - Air75 v2
 
-Initial attempt to pull latest QMK into latest Nuphy code. As of 2024-01-07 – feel free to skip unless you want their opinionated mod.
+Initial attempt to pull the latest QMK into the latest NuPhy code. As of 2024-01-07 – feel free to skip unless you want their opinionated mod.
 
 Note:
-- Branch qmk/nuphy-keyboards : clean state
-- Branch edykim/nuphy-keyboards-mod : modded by edykim
+- Branch *qmk/nuphy-keyboards*: clean state
+- Branch *edykim/nuphy-keyboards-mod*: modified by edykim
 
 
 ### [adi4086/qmk_firmware](https://github.com/adi4086/qmk_firmware)
@@ -93,14 +93,14 @@ First custom firmware for Air96 v2
 Fixes
 - New algorithm to prevent unnecessary EEPROM writes when you change light settings
 - Pulled fixes from jincao1
-- Opinionated mods
+- Opinionated modifications
 
 ## QMK: Tooling
 
-Read this section and then use [QMK docs](https://docs.qmk.fm) as further QMK reference.
+Read this section and then use the [QMK documentation](https://docs.qmk.fm) as further QMK reference.
 
 ### QMK CLI
-QMK provides CLI that helps with common tasks
+QMK provides a CLI that helps with common tasks
 - Cloning (potentially custom) repo
 - Compiling
 - Flashing
@@ -113,12 +113,12 @@ OS support:
    - Apple Silicon: installation takes 2 hours
 - Windows: yes
 
-**Note**: It installs a lot of stuff to your system so maybe use:
+**Note**: It installs a lot of stuff to your system, so maybe use:
 
 ### Docker + QMK Toolbox
 
-**Alternatively**, people with a bit of programming background will be comfortable using 
-- Git to clone repo (use `--recurse-submodules` !!!)
+**Alternatively**, people with a bit of programming background will be comfortable using
+- Git to clone the repo (use `--recurse-submodules` !!!)
 - [Docker to compile code](https://github.com/qmk/qmk_firmware/blob/master/docs/getting_started_docker.md)
 - [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) to flash and debug. (**Mac and Windows only!**)
 
@@ -127,10 +127,10 @@ OS support:
 
 QMK can be roughly divided into **core** and **keyboards**. We are interested in **keyboards**.
 
-**keyboards** are located under `./keyboards/<company>/<model>/<submodel>`, e.g. `./keyboards/nuphy/air75_v2/ansi` will be for Nuphy Air75 V2.
+**keyboards** are located under `./keyboards/<company>/<model>/<submodel>`, e.g. `./keyboards/nuphy/air75_v2/ansi` will be for NuPhy Air75 V2.
 
-There you have 
-- Keymaps – define multiple "layers" which can be switched, most commonly via `Fn` key. Every keyboard might have several keymaps, only one can be flashed at the time. E.g. for Air75 v2 two keymaps are provided:
-  - `via` – supports [VIA Configurator](https://www.caniusevia.com/) for UI-based config
+There you have
+- Keymaps – define multiple "layers" which can be switched, most commonly via an `Fn` key. Every keyboard might have several keymaps, and only one can be flashed at the time. E.g., for Air75 v2 two keymaps are provided:
+  - `via` – supports [VIA Configurator](https://www.caniusevia.com/) for UI-based configuration
   - `default` – doesn't support VIA – as of 2024-01-07 the only other difference is that it supports showing battery level using `Fn + B`
 - Keyboard's low-level code – likely you don't want to change it
