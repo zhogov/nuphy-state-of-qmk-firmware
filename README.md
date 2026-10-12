@@ -95,6 +95,22 @@ Fixes
 - Pulled fixes from jincao1
 - Opinionated modifications
 
+### [ablasik/nuphy-qmk](https://github.com/ablasik/nuphy-qmk)
+
+Supported keyboards:
+- Air60 v2
+- Air75 v2
+- Air96 v2
+
+Continues adi4086's firmware (including jincao1's fixes) on the latest QMK. As of 2026-10, upstream QMK is merged weekly.
+
+What's inside:
+- Latest QMK and ChibiOS, with QMK's and ChibiOS's own LED, EEPROM (wear leveling) and power code instead of NuPhy's copies
+- Fix for freezes and phantom keypresses on current QMK (the RF module's UART ended up on matrix pins after a QMK change)
+- Mac/Win remembered per connection, OS detection on the cable
+- Prebuilt releases (`.bin`, VIA JSON, Quick Guide PDF) built by CI
+- Air75 v2 and Air60 v2 not yet tested on hardware as of 2026-10
+
 ## QMK: Tooling
 
 Read this section and then use the [QMK documentation](https://docs.qmk.fm) as further QMK reference.
